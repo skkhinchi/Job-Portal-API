@@ -59,15 +59,83 @@ curl --location --request GET 'localhost:8080/show-Candidate-Job-details-by-ID-w
 
 
 6: To create a new company *
+
+curl --location --request POST 'localhost:8080//save-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+
+        "post": "QA",
+        "compId": 6
+    }'
+    
 7:To update existing company *
+
+curl --location --request PUT 'localhost:8080/update-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "id": 5,
+        "post": "QA",
+        "compId": 1
+    }'
+    
+    
 8:Show company details by ID *
-9:Show All the companies * 10: 
-To create new jobs for a company. *
+
+curl --location --request GET 'localhost:8080/show-company-details-by-ID?id=3' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+       
+        "post": "QA",
+        "compId": 2
+    }'
+
+9:Show All the companies * 
+
+curl --location --request GET 'localhost:8080//show-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+10:To create new jobs for a company. *
+curl --location --request POST 'localhost:8080/save-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+       
+        "post": "QA",
+        "compId": 2
+    }'
+
 11:To update existing job for the company *
+
+curl --location --request PUT 'localhost:8080/update-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "id": 1,
+        "post": "QA",
+        "compId": 1
+    }'
+    
 12:Show All the Jobs * 
+curl --location --request GET 'localhost:8080/show-jobs' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
 13: Show all available Jobs in Companies by particular Post * 
+
+curl --location --request GET 'localhost:8080/show-post-details?post=HR' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
 14:Show All Candidate which they are Applied & With Status *
-15: Update Job Status by id * 
+
+curl --location --request GET 'localhost:8080/show-Relational' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
+15: Update Job Status by id *
+
+
 16: Get the status of candidate application of Job by Candidate ID *
 17: For each job, which candidates have applied for the job *
 
