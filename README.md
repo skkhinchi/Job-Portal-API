@@ -1,11 +1,63 @@
 # Job-Portal-API
 
 
-You sholud create all the tables for perform these API calls: 1: To create a new Candidate * 
+You sholud create all the tables for perform these API calls:
+1: To create a new Candidate * 
+curl --location --request POST 'localhost:8080/save-candidates' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+
+        "name": "Kumar",
+        "mobileNo": "8104291629",
+        "email": "sk15cs80@gmail.com",
+        "canCity": "Banglore"
+    }'
+    
+
 2:To update existing Candidate *
+
+curl --location --request PUT 'localhost:8080/update-candidates' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "id": 13,
+        "name": "Raj",
+        "mobileNo": "8104291629",
+        "email": "sk15cs80@gmail.com",
+        "canCity": "Banglore"
+    }'
+    
+    
+
 3:Show All the Candidates *
+curl --location --request GET 'localhost:8080/show-candidates' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "id": 13,
+        "name": "Raj",
+        "mobileNo": "8104291629",
+        "email": "sk15cs80@gmail.com",
+        "canCity": "Banglore"
+    }'
+    
+
+
+
 4:Show candidate details by ID *
+
+curl --location --request GET 'localhost:8080/show-candidate-details?id=13' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
+
+
 5:For each candidate, which are the jobs they have applied for * 
+curl --location --request GET 'localhost:8080/show-Candidate-Job-details-by-ID-which-he-applied?id=3' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
+
 6: To create a new company *
 7:To update existing company *
 8:Show company details by ID *
