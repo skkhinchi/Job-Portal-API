@@ -1,4 +1,4 @@
-Database Name: Company
+
 You sholud create all the tables for perform these API calls:
 1: To create a new Candidate *
 2:To update existing Candidate *
@@ -17,6 +17,9 @@ You sholud create all the tables for perform these API calls:
 15: Update Job Status by id *
 16: Get the status of candidate application of Job by Candidate ID *
 17: For each job, which candidates have applied for the job *
+
+
+Create Database : Company
 
 Cadidate Table:
 
